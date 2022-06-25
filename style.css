@@ -1,0 +1,800 @@
+@import url('https://fonts.googleapis.com/css2?&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #bec4ca;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #202326;
+}
+body{
+   overflow-x: hidden;
+   background-color: var(--dark);
+   width: 100vw;
+   
+}
+
+#navbar {
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1.875rem;
+    position: fixed;
+    background-color: var(--dark);
+    /* border-bottom: 1px solid var(--gray); */
+    z-index: 1;
+    
+}
+.hamburger-menu {
+    display: none;
+}
+
+.logoContainer{
+    width: 50vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: var(--white);
+    font-family: Montserrat, serif;
+}
+.logoContainer img {
+    width: 3.125rem;
+    margin: 0 0.875rem 0 0;
+    
+}
+
+#navLink {
+    width: 40vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+    font-family: Montserrat;
+    
+}
+
+#navLink a {
+    text-decoration: none;
+    color: var(--gray);
+    font-weight: bold;
+}
+#navLink a:hover {
+    color: var(--light);
+    transition: all 1s;
+    transform: scale(1.2);
+}
+
+
+
+/* ============================================
+---------------WELCOME SECTION-----------------
+=============================================== */
+
+#welcome-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--dark);
+    color: var(--light);
+    font-family: 'Roboto slab', sans-serif;
+}
+
+
+.imgContainer {
+    width: 30vw;
+    position: relative;
+
+}
+
+.aboutContainer {
+    width: 40vw;
+
+}
+
+/* ============================================
+---------------HEADINGS FONT SIZE--------------
+=============================================== */
+.name,
+.project-header,
+.social_heading {
+    font-size: 3rem;
+}
+
+.title,
+.mySelf {
+    color: var(--gray);
+    font-size: 0.875rem ;
+    line-height: 1.875rem;
+}
+
+
+.myImage {
+    height: 20rem;
+    width: 20rem;
+    border: 1.25rem solid var(--primary);
+    border-radius: 50%;
+    box-shadow: 0 0 .625rem #000;
+}
+
+.imgContainer::before {
+    content: '';
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: var(--orange);
+    position: absolute;
+    border-radius: 50%;
+    left: 9.4rem; 
+    bottom: 9.6rem;
+    animation: circle 6s linear infinite; 
+}
+@keyframes circle {
+    0%{
+        transform: rotate(0deg) translate( 9rem) rotate(0deg);
+        /* background-color: var(--orange); */
+    }
+
+
+    100%{
+        transform: rotate(360deg)
+        translate(9rem)
+        rotate(360deg);
+    }
+}
+
+
+
+.aboutContainer a {
+    display: flex;
+    float: left;
+    margin: 0.875rem 0.875rem;
+    padding: .45rem 1.875rem;
+    color: var(--gray);
+    text-decoration: none;
+    border-radius: 1.75rem;
+    box-shadow: 0 0.3125rem  0.3125rem rgba(0, 0, 0, 0.3) ;
+    font-family: Montserrat, serif;
+}
+
+.aboutContainer a.resume {
+    border: solid 0.125rem var(--primary) ;  
+}
+.aboutContainer a.resume:hover {
+    background-color: var(--primary) ;
+    transition: all .4s;
+}
+
+.aboutContainer a.contact {
+    border: solid .125rem var(--gray) ;  
+}
+.aboutContainer a.contact:hover {
+   background-color: var(--gray) ; 
+   color: var(--dark);
+   transition: all .4s;
+}
+
+
+/* ============================================
+---------------PROJECT SECTIOn-----------------
+=============================================== */
+
+.project-header,
+.social_heading {
+    color: var(--white);
+    font-family: 'Roboto slab', sans-serif;
+    text-align: center;
+    text-transform: uppercase ;
+    position: relative;
+    padding-top: 6rem;
+}
+
+.project-header::before,
+.social_heading::before {
+    content: "";
+    height: 2px;
+    width: 43rem;
+    position: absolute;
+    background-color: var(--light);
+    left: 21rem;
+    bottom: 0;
+}
+
+.project-header::after,
+.social_heading::after {
+    content: "";
+    height: 2px;
+    width: 21.5rem;
+    position: absolute;
+    background-color: var(--primary);
+    left: 21rem;
+    bottom: 0;
+}
+
+figure {
+    width: 30vw;
+    background-color: var(--gray);
+    margin: 1.75rem auto;
+    padding: 0 .75rem;
+}
+#projects{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#projects img {
+    width: 100%;
+}
+#projects figure:hover {
+    transform: scale(1.05);
+    transition: all 1s ease-in-out;
+    margin-bottom: .75rem;
+    opacity: 0.7;
+}
+#projects a {
+  color: var(--dark);
+  font-weight: bold;
+  text-decoration: none;
+  font-family: Montserrat, serif;
+  text-transform: capitalize;
+}
+#projects a:hover {
+    text-decoration: underline;
+}
+
+
+.moreBtn {
+    /* text-align: center; */
+    font-size: 1.5rem;
+    margin: 1rem 0 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.moreBtn a.more {
+    background-color: var(--blue);
+    color: var(--light);
+    text-decoration: none;
+    padding: .75rem 1.5rem;
+    box-shadow: 0 0 .625rem var(--primary);
+
+}
+.moreBtn a.more:hover {
+    background-color: var(--dark);
+    border: 0.125rem solid var(--blue);
+    transform: scale(1.2);
+    transition: all 1s ease-in-out;
+    border-radius: 0.625rem;
+}
+.moreBtn a.more::after {
+    content: "\00BB";
+    color: var(--orange);
+    position: relative;
+    right: -0.625rem;
+}
+
+
+/* ============================================
+----------------SOCIAL SECTIOn-----------------
+=============================================== */
+
+
+.social_heading::before {
+    content: "";
+    height: 2px;
+    width: 33.5rem;
+    left: 26rem;
+}
+
+.social_heading::after {
+    content: "";
+    height: 2px;
+    width: 12.5rem;
+    left: 26rem;
+  
+}
+
+
+svg {
+    height: 30px;
+    width: 20px;
+
+}
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+}
+.social a   {
+    margin: 0 1.25rem ;
+    fill: var(--orange);
+    position: relative;
+    width: 10vw;
+    font-family: Montserrat, serif;
+    color: var(--light);
+    
+}
+.social a span {
+    display: none;
+    background-color: var(--orange);
+    padding: .75rem;
+    border-radius: .625rem;
+}
+.social a:hover span.popup {
+    display: block;
+    position: absolute;
+    left: -60px;   
+    
+}
+
+
+
+#footer-section {
+    display: flex;
+    justify-content: center;
+    color: var(--gray);
+    font-family: 'Roboto slab', sans-serif;
+    margin-bottom: 2rem;
+    width: 100vw;
+}
+
+
+
+/* ============================================
+---------------TAB Responsiveness--------------
+=============================================== */
+
+
+@media  (max-width: 768px ){
+    section#welcome-section{
+        display: flex;
+        flex-direction: column;
+        padding: 20rem 0;
+    
+    }
+
+    .imgContainer {
+        width: 100vw;
+        margin: 2rem;
+        display: flex;
+        justify-content: center;
+        top: 1em;
+        position: relative;
+    }
+
+    .myImage{
+        height: 15rem;
+        width: 15rem;
+        border: .75rem solid var(--blue);
+    }
+
+    .imgContainer::before {
+        left: 23.3rem; 
+        bottom: 6.85rem;
+        position: absolute;
+    }
+
+    @keyframes circle {
+        0%{
+            transform: rotate(0deg) translate( 7rem) rotate(0deg);
+             background-color: var(--orange); 
+        }
+    
+    
+         100%{
+            transform: rotate(360deg)
+            translate(7rem)
+            rotate(360deg);
+        } 
+    }
+        
+    .aboutContainer {
+        margin-top: 1rem;
+        width: 80vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+        
+    /* ============================================
+---------------PROJECT SECTIOn-----------------
+=============================================== */
+
+.project-header,
+.social_heading {
+    color: var(--white);
+    font-family: 'Roboto slab', sans-serif;
+    text-align: center;
+    text-transform: uppercase ;
+    position: relative;
+    padding-top: 6rem;
+}
+
+.project-header::before,
+.social_heading::before {
+    content: "";
+    height: 2px;
+    width: 29rem;
+    position: absolute;
+    background-color: var(--light);
+    left: 9.5rem;
+    bottom: 0;
+}
+
+.project-header::after,
+.social_heading::after {
+    content: "";
+    height: 2px;
+    width: 15rem;
+    position: absolute;
+    background-color: var(--primary);
+    left: 9.5rem;
+    bottom: 0;
+}
+
+figure {
+    width: 45vw;
+    background-color: var(--gray);
+    margin: 1.75rem 1rem;
+    /* padding: 0 .75rem; */
+}
+
+    .project-header{
+        font-size: 2rem;
+    }
+
+/* ============================================
+---------------SOCIAL SECTIOn-----------------
+=============================================== */
+
+    .social_heading {
+        font-size: 2.6rem;
+    }
+
+    .social {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 2rem 0;
+        height: 18.75rem;
+    }
+    .social a   { 
+        width: 40vw;
+        text-decoration: none;  
+    }
+
+    .social a span {
+        display: inline;
+        margin: 1rem;
+    }
+
+    .social a:hover span.popup {
+        position: static;
+        display: inline;
+    }
+    .social a:hover{
+        transform: scale(1.2);
+        transition: all 1s ease-in-out;
+    }
+}
+
+
+
+/* ============================================
+--------------Mobile Responsiveness------------
+=============================================== */
+
+
+@media  (max-width: 375px ){
+
+/* ============================================
+----------------------NAV BAR------------------
+=============================================== */
+
+    .logoText {
+        font-size: 1rem;
+    }
+    #navbar {
+       display: block;
+        z-index: 1;
+        /* background-color: var(--light); */
+        padding: .5rem;
+    }
+    
+    .logoContainer{
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+       /* position: relative; */
+       /* top: -1.25rem; */
+       
+    }
+    .logoContainer img {
+        margin: 0 1rem 0 0;
+        
+    }
+    
+    #navLink {
+        display: none;
+        
+    }
+
+/* ============================================
+---------------HAMBURGER MENU--------------
+=============================================== */
+    .hamburger-menu{
+        display: block;
+    }
+    .menu_btn {
+        width: 1.25rem;
+        height: 1.25rem;
+        position: fixed;
+        top: 2.25rem;
+        right: 1.25rem;
+        
+    }
+    .menu_btn > span,
+    .menu_btn > span::before,
+    .menu_btn > span::after {
+        position: absolute;
+        width: 100%;
+        height: 0.125rem;
+        background-color: var(--gray);
+        transition-duration: .25s;
+    }
+    .menu_btn > span::before {
+        content: '';
+        top: -0.5rem;
+    }
+    .menu_btn > span::after {
+        content: '';
+        top: 0.5rem;
+    }
+    .menu_box {
+        /* display: block; */
+        position: fixed;
+        top: -5rem;
+        right: -200%;
+        width: 20rem;
+        height: 20rem;
+        padding: 5rem 0;
+        list-style: none;
+        background-color:var(--info) ;
+        border-radius: 50%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        transition-duration: .25s;
+    }
+    .menu_box li  {
+        margin: 0 5%;
+        width: 80%;
+        padding: 1rem 2rem;
+        font-size: 1.5rem;
+        
+    }
+    
+    .menu_box li a {
+        color: var(--light);
+        text-decoration: none;
+        font-family: Montserrat, serif;
+        font-weight: bold;
+    }
+    
+    .menu_box li:hover {
+        background-color: var(--gray);
+        border-radius: 5rem;
+    }
+    .menu_box li:hover a {
+        color: var(--dark);
+    
+    }
+    #menu_toggle {
+        width: 1.5rem;
+        height: 1.5rem;
+        position: absolute;
+        top: 1.5rem;
+        right: 2.25rem;
+        opacity: 0;
+    }
+    
+    #menu_toggle:checked + .menu_btn > span {
+        transform: rotate(45deg);
+    }
+    #menu_toggle:checked + .menu_btn > span::before{
+        top: 0;
+        transform: rotate(0);
+    }
+    #menu_toggle:checked + .menu_btn > span::after{
+        top: 0;
+        transform: rotate(90deg);
+    }
+    #menu_toggle:checked ~ .menu_box {
+        right: -30%;
+
+        z-index: -1;
+    }
+    
+
+
+    /* ============================================
+    ---------------WELCOME SECTIOn-----------------
+    =============================================== */
+
+    main {
+        padding: 4rem 0;
+    }
+    section#welcome-section{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        padding: 0;
+        margin: 0;
+    }
+    .imgContainer::before {
+        left: 11.01rem; 
+        bottom: 6.8rem;
+        position: absolute;
+    }
+
+    .name {
+    font-size: 2.5rem;
+    }
+
+    .imgContainer {
+    width: 100vw;
+
+    }
+
+    .aboutContainer {
+    width: 90vw;
+    text-align: justify;
+
+    }
+        
+
+    /* ============================================
+    ---------------PROJECT SECTIOn-----------------
+    =============================================== */
+
+    
+    .project-header,
+    .social_heading {
+        color: var(--white);
+        font-family: 'Roboto slab', sans-serif;
+        text-align: center;
+        text-transform: uppercase ;
+        position: relative;
+        padding-top: 6rem;
+    }
+
+    .project-header::before,
+    .social_heading::before {
+        content: "";
+        height: 2px;
+        width: 14.5rem;
+        position: absolute;
+        background-color: var(--light);
+        left: 4.5rem;
+        bottom: 0;
+    }
+
+    .project-header::after,
+    .social_heading::after {
+        content: "";
+        height: 2px;
+        width: 7rem;
+        position: absolute;
+        background-color: var(--primary);
+        left: 4.5rem;
+        bottom: 0;
+    }
+
+    figure {
+        width: 80vw;
+        background-color: var(--gray);
+        margin: 2rem;
+        padding: 0 ;
+    }
+
+    #projects{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100vw;
+        padding: 0;
+        margin: 0;
+      }
+    .project-header{
+        font-size: 1rem;
+    }
+
+
+
+   
+/* ============================================
+---------------SOCIAL SECTION-----------------
+=============================================== */
+
+    .social_heading {
+        font-size: 1.5rem;
+    }
+    .social_heading::before {
+        content: "";
+        width: 16.85rem;
+        left: 3.2rem;
+ 
+    }
+    .social_heading::after {
+        content: "";
+        width: 7rem;
+        left: 3.2rem;
+    }
+
+
+    .social {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 0 0;
+        height: 29.125rem;
+    
+    }
+    .social a   { 
+        width: 80vw;
+        text-decoration: none;  
+    }
+
+    .social a span {
+        display: inline;
+        margin: 1rem;
+    }
+
+    .social a:hover span.popup {
+        position: static;
+        display: inline;
+    }
+    .social a:hover{
+        transform: scale(1.2);
+        transition: all 1s ease-in-out;
+    }
+
+}
+
+
+
