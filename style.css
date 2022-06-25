@@ -372,7 +372,7 @@ svg {
 =============================================== */
 
 
-@media  (max-width: 768px ){
+@media  (max-width: 1199px ){
     section#welcome-section{
         display: flex;
         flex-direction: column;
@@ -425,86 +425,86 @@ svg {
     }
         
     /* ============================================
----------------PROJECT SECTIOn-----------------
-=============================================== */
+    ---------------PROJECT SECTIOn-----------------
+    =============================================== */
 
-.project-header,
-.social_heading {
-    color: var(--white);
-    font-family: 'Roboto slab', sans-serif;
-    text-align: center;
-    text-transform: uppercase ;
-    position: relative;
-    padding-top: 6rem;
-}
-
-.project-header::before,
-.social_heading::before {
-    content: "";
-    height: 2px;
-    width: 29rem;
-    position: absolute;
-    background-color: var(--light);
-    left: 9.5rem;
-    bottom: 0;
-}
-
-.project-header::after,
-.social_heading::after {
-    content: "";
-    height: 2px;
-    width: 15rem;
-    position: absolute;
-    background-color: var(--primary);
-    left: 9.5rem;
-    bottom: 0;
-}
-
-figure {
-    width: 45vw;
-    background-color: var(--gray);
-    margin: 1.75rem 1rem;
-    /* padding: 0 .75rem; */
-}
-
-    .project-header{
-        font-size: 2rem;
-    }
-
-/* ============================================
----------------SOCIAL SECTIOn-----------------
-=============================================== */
-
+    .project-header,
     .social_heading {
-        font-size: 2.6rem;
+        color: var(--white);
+        font-family: 'Roboto slab', sans-serif;
+        text-align: center;
+        text-transform: uppercase ;
+        position: relative;
+        padding-top: 6rem;
     }
 
-    .social {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        align-items: center;
-        padding: 2rem 0;
-        height: 18.75rem;
-    }
-    .social a   { 
-        width: 40vw;
-        text-decoration: none;  
+    .project-header::before,
+    .social_heading::before {
+        content: "";
+        height: 2px;
+        width: 29rem;
+        position: absolute;
+        background-color: var(--light);
+        left: 9.5rem;
+        bottom: 0;
     }
 
-    .social a span {
-        display: inline;
-        margin: 1rem;
+    .project-header::after,
+    .social_heading::after {
+        content: "";
+        height: 2px;
+        width: 15rem;
+        position: absolute;
+        background-color: var(--primary);
+        left: 9.5rem;
+        bottom: 0;
     }
 
-    .social a:hover span.popup {
-        position: static;
-        display: inline;
+    figure {
+        width: 45vw;
+        background-color: var(--gray);
+        margin: 1.75rem 1rem;
+        /* padding: 0 .75rem; */
     }
-    .social a:hover{
-        transform: scale(1.2);
-        transition: all 1s ease-in-out;
-    }
+
+        .project-header{
+            font-size: 2rem;
+        }
+
+    /* ============================================
+    ---------------SOCIAL SECTIOn-----------------
+    =============================================== */
+
+        .social_heading {
+            font-size: 2.6rem;
+        }
+
+        .social {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 2rem 0;
+            height: 18.75rem;
+        }
+        .social a   { 
+            width: 40vw;
+            text-decoration: none;  
+        }
+
+        .social a span {
+            display: inline;
+            margin: 1rem;
+        }
+
+        .social a:hover span.popup {
+            position: static;
+            display: inline;
+        }
+        .social a:hover{
+            transform: scale(1.2);
+            transition: all 1s ease-in-out;
+        }
 }
 
 
@@ -514,7 +514,7 @@ figure {
 =============================================== */
 
 
-@media  (max-width: 375px ){
+@media  (max-width: 768px ){
 
 /* ============================================
 ----------------------NAV BAR------------------
