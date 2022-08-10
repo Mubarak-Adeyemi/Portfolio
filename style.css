@@ -6,6 +6,11 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+   scroll-behavior: smooth;
+}
+*::after,
+*::before {
+    box-sizing: border-box;
 }
 
 :root {
@@ -34,7 +39,6 @@ body{
    overflow-x: hidden;
    background-color: var(--dark);
    width: 100vw;
-   
 }
 
 #navbar {
@@ -45,7 +49,6 @@ body{
     padding: 1.875rem;
     position: fixed;
     background-color: var(--dark);
-    /* border-bottom: 1px solid var(--gray); */
     z-index: 1;
     
 }
@@ -155,7 +158,6 @@ body{
 @keyframes circle {
     0%{
         transform: rotate(0deg) translate( 9rem) rotate(0deg);
-        /* background-color: var(--orange); */
     }
 
 
@@ -269,7 +271,6 @@ figure {
 
 
 .moreBtn {
-    /* text-align: center; */
     font-size: 1.5rem;
     margin: 1rem 0 4rem;
     display: flex;
